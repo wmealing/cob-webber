@@ -1,0 +1,54 @@
+--- ./libcob/call.c.orig	2022-10-10 00:21:14.002327349 +1000
++++ ./libcob/call.c	2022-10-10 00:21:16.819338571 +1000
+@@ -553,7 +553,9 @@
+ 		return 0;
+ 	}
+ 
+-	libhandle = lt_dlopen (path);
++	// libhandle = lt_dlopen (path);
++	libhandle = NULL;
++
+ 	if (!libhandle) {
+ 		return 0;
+ 	}
+@@ -871,7 +873,9 @@
+ 	for (p = call_filename_buff; *p; ++p) {
+ 		*p = (cob_u8_t)toupper(*p);
+ 	}
+-	handle = lt_dlopen (call_filename_buff);
++	// handle = lt_dlopen (call_filename_buff);
++	handle = NULL;
++
+ 	if (handle != NULL) {
+ 		/* Candidate for future calls */
+ 		cache_dynload (call_filename_buff, handle);
+@@ -893,7 +897,8 @@
+ 			set_resolve_error ();
+ 			return NULL;
+ 		}
+-		handle = lt_dlopen (call_filename_buff);
++		// handle = lt_dlopen (call_filename_buff);
++		handle = NULL;
+ 		if (handle != NULL) {
+ 			/* Candidate for future calls */
+ 			cache_dynload (call_filename_buff, handle);
+@@ -922,7 +927,8 @@
+ 		}
+ 		call_filename_buff[COB_NORMAL_MAX] = 0;
+ 		if (access (call_filename_buff, R_OK) == 0) {
+-			handle = lt_dlopen (call_filename_buff);
++			// handle = lt_dlopen (call_filename_buff);
++			handle = NULL;
+ 			if (handle != NULL) {
+ 				/* Candidate for future calls */
+ 				cache_dynload (call_filename_buff, handle);
+@@ -1570,7 +1576,8 @@
+ 	   saves a check for exported functions in every CALL
+ 	*/
+ 	if (check_mainhandle) {
+-		mainhandle = lt_dlopen (NULL);
++		// mainhandle = lt_dlopen (NULL);
++		mainhandle = NULL;
+ 	} else {
+ 		mainhandle = NULL;
+ 	}

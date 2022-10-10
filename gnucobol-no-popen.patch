@@ -1,0 +1,13 @@
+--- config.h	2022-10-07 21:59:01.007778479 +1000
++++ config.h.fixed	2022-10-07 21:58:15.422623986 +1000
+@@ -299,7 +299,9 @@
+ /* #undef HAVE_PDCURSES_H */
+ 
+ /* Define to 1 if you have the `popen' function. */
+-#define HAVE_POPEN 1
++/* #define HAVE_POPEN 1 */ 
++#undef HAVE_POPEN 
++
+ 
+ /* Define to 1 if you have the `raise' function. */
+ #define HAVE_RAISE 1
