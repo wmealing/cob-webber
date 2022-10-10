@@ -159,7 +159,9 @@ with the known program id (in all caps)
 ## Roadmap
 
 
-- [ ] Make my local working example reproducible and uploadable.
+- [x] Make my local working example reproduce on my machine
+- [x] Upload to github
+- [ ] Test it from a completely clean install (container maybe ?)
 -    [ ] host an example and take a screenshot
 -    [ ] put screenshot in this readme.
 - [ ] Make ncurses work
