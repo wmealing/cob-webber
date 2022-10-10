@@ -80,29 +80,63 @@ Listed below is an example on how to install gnucobol-mode on a Linux:
 	./emsdk activate latest
     ```
 
-    ( I have seen different "latests" fail in odd ways, so if that doesn't work, just wait a day
-    or try a few versions back.)
+    The results will tell you to activate the sdk, do so, you may need to modify paths.
+    
+    ```sh
+    source "./deps/emsdk/emsdk_env.sh
+    ```
 
 4. Build the tooling.
 
     ```sh
     make gmp
-    make ncurses
     make cob
     ```
 
-    Building these individually, in case it fails.
+    Building these individually, gmp and cob should end up putting .a (static archives)
+    in the /dist/lib directory.
+    
+    Optional.
+    
+    These archives should contain webassembly object files (not native objects).
+    This can be verified with the ar command:
+    
+    ```sh
+    $ ar xv dist/lib/libcob.a
+    ....
+     
+    $ file *o
+    
+     file *o
+     call.o:      WebAssembly (wasm) binary module version 0x1 (MVP)
+     cobgetopt.o: WebAssembly (wasm) binary module version 0x1 (MVP)
+     common.o:    WebAssembly (wasm) binary module version 0x1 (MVP)
+     fileio.o:    WebAssembly (wasm) binary module version 0x1 (MVP)
+     intrinsic.o: WebAssembly (wasm) binary module version 0x1 (MVP)
+     mlio.o:      WebAssembly (wasm) binary module version 0x1 (MVP)
+     move.o:      WebAssembly (wasm) binary module version 0x1 (MVP)
+     numeric.o:   WebAssembly (wasm) binary module version 0x1 (MVP)
+     reportio.o:  WebAssembly (wasm) binary module version 0x1 (MVP)
+     screenio.o:  WebAssembly (wasm) binary module version 0x1 (MVP)
+     strings.o:   WebAssembly (wasm) binary module version 0x1 (MVP)
+     termio.o:    WebAssembly (wasm) binary module version 0x1 (MVP)
 
-    Optionally TODO: explain how to check the static library files in /dist/lib
-    contain webassembly objects, no not native objects. (using "ar" and file.)
+   # clean up the object files you just extracted
+   $ rm *.o
+   
+    ```
 
 5. Build your GnuCOBOL code.
 
     ```sh
-    # ./compile.sh hello_world.cob
+    $ ./compile.sh hello_world.cob
     ```
 
 6. Serve up your cobol.
+
+    Serving the page up through a webserver, seemed to work on more browsers,
+    there was some odd behavior when it was using file:// urls, so just fire up
+    a python webserver (or make it availble over http on your favorite hosting platform)
 
      ```sh
      python3 -m http.server
@@ -110,26 +144,28 @@ Listed below is an example on how to install gnucobol-mode on a Linux:
 
 Now visit http://127.0.0.1:8000/out.html in your browser.
 
-    This serves up out.html out.js out.wasm , which you could copy up
-    to your favorite webservice, but in this example its just serving
-    locally becase its easier.
-
 
 ## Advanced Usage.
 
+The demonstration compile.sh is a single file compile, it uses a combination of c and GnuCOBOL
+conventions to work together. I'm not sure these are the best way, but its what I have working.
 
+The cobc compiler generates a function name to the same name as the function defined as the program id.
+
+Because of this, you can link it with a C program by creating the c code from gnucobol, then calling it
+with the known program id (in all caps)
 
 <!-- ROADMAP -->
 ## Roadmap
 
 
-[ ] Make my local working example reproducible and uploadable.
-    [ ] host an example and take a screenshot
-    [ ] put screenshot in this readme.
-[ ] Make ncurses work
-[ ] Get GnuCOBOL changes upstream (maybe ?)
-    [ ] Open thread on the sourceforge discussions page.
-    [ ] Send patch with feedback to the gnucobol legends.
+- [ ] Make my local working example reproducible and uploadable.
+-    [ ] host an example and take a screenshot
+-    [ ] put screenshot in this readme.
+- [ ] Make ncurses work
+- [ ] Get GnuCOBOL changes upstream (maybe ?)
+-    [ ] Open thread on the sourceforge discussions page.
+-    [ ] Send patch with feedback to the gnucobol legends.
 
 <!-- CONTRIBUTING -->
 ## Contributing
