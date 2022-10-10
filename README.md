@@ -60,7 +60,19 @@ Listed below is an example on how to install gnucobol-mode on a Linux:
     git clone http://github.com/wmealing/cob-webber.git
     ```
 
-2. Activate the emscripten sdk.
+2. Install the submodules.
+
+    At this time, the GnuCOBOL code is entirely in my git tree, because it is hosted
+    on sourceforge in a svn repository, and I can't have a subversion submodule.
+
+    However, lets activate the emsdk submodule.
+
+    ```sh
+    git submodule init
+    git submodule update
+    ```
+
+3. Activate the emscripten sdk.
 
    ```sh
  	cd ./deps/emsdk/
@@ -71,7 +83,7 @@ Listed below is an example on how to install gnucobol-mode on a Linux:
     ( I have seen different "latests" fail in odd ways, so if that doesn't work, just wait a day
     or try a few versions back.)
 
-3. Build the tooling.
+4. Build the tooling.
 
     ```sh
     make gmp
@@ -84,13 +96,13 @@ Listed below is an example on how to install gnucobol-mode on a Linux:
     Optionally TODO: explain how to check the static library files in /dist/lib
     contain webassembly objects, no not native objects. (using "ar" and file.)
 
-4. Build your GnuCOBOL:
+5. Build your GnuCOBOL code.
 
     ```sh
     # ./compile.sh hello_world.cob
     ```
 
-5. Serve up your cobol.
+6. Serve up your cobol.
 
      ```sh
      python3 -m http.server
