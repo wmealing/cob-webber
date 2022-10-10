@@ -159,15 +159,15 @@ with the known program id (in all caps)
 ## Roadmap
 
 
-- [x] Make my local working example reproduce on my machine
-- [x] Upload to github
-- [ ] Test it from a completely clean install (container maybe ?)
--    [ ] host an example and take a screenshot
--    [ ] put screenshot in this readme.
-- [ ] Make ncurses work
-- [ ] Get GnuCOBOL changes upstream (maybe ?)
--    [ ] Open thread on the sourceforge discussions page.
--    [ ] Send patch with feedback to the gnucobol legends.
+* [x] Make my local working example reproduce on my machine
+* [x] Upload to github
+* [ ] Test it from a completely clean install (container maybe ?)
+  * [ ] host an example and take a screenshot
+  * [ ] put screenshot in this readme.
+* [ ] Make ncurses work
+* [ ] Get GnuCOBOL changes upstream (maybe ?)
+  *  [ ] Open thread on the sourceforge discussions page.
+  *  [ ] Send patch with feedback to the gnucobol legends.
 
 <!-- CONTRIBUTING -->
 ## Contributing
