@@ -1,0 +1,11 @@
+--- configure.ac.orig	2022-10-10 00:26:24.447564004 +1000
++++ configure.ac	2022-10-10 00:26:47.727656741 +1000
+@@ -1850,7 +1850,7 @@
+ 
+ if test "$COB_USES_CLANG_ONLY" = "yes"; then
+ 	# don't warn if cobc uses arguments which aren't picked up (likely because of the translation phase)
+-	COB_CFLAGS="$COB_CFLAGS -Qunused-arguments"
++	COB_CFLAGS="$COB_CFLAGS"
+ fi
+ 
+ 

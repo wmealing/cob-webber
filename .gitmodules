@@ -1,0 +1,6 @@
+[submodule "deps/gmp-wasm"]
+	path = deps/gmp-wasm
+	url = https://github.com/torquem-ch/gmp-wasm.git
+[submodule "deps/emsdk"]
+	path = deps/emsdk
+	url = https://github.com/emscripten-core/emsdk.git

@@ -1,0 +1,89 @@
+parser.o: parser.c ../config.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  cobc.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h \
+  /home/wmealing/Projects/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/wmealing/Projects/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h \
+  /home/wmealing/Projects/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/bits/posix.h \
+  ../libcob.h ../libcob/common.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/setjmp.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/bits/setjmp.h \
+  ../libcob/exception.def ../libcob/exception-io.def ../lib/gettext.h \
+  /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/libintl.h \
+  flag.def warning.def codeoptim.def config.def tree.h
+
+../config.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:
+
+cobc.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:
+
+/home/wmealing/Projects/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/wmealing/Projects/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h:
+
+/home/wmealing/Projects/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/bits/posix.h:
+
+../libcob.h:
+
+../libcob/common.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/setjmp.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/bits/setjmp.h:
+
+../libcob/exception.def:
+
+../libcob/exception-io.def:
+
+../lib/gettext.h:
+
+/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/include/libintl.h:
+
+flag.def:
+
+warning.def:
+
+codeoptim.def:
+
+config.def:
+
+tree.h:
