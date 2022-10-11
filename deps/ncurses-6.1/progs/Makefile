@@ -137,7 +137,7 @@ AUTO_SRC = \
 
 # tic relies on direct access to the terminfo database
 GET_PROGS = infocmp$x clear$x tabs$x tput$x tset$x toe$x
-PUT_PROGS =  tic$x
+PUT_PROGS = # tic$x
 PROGS = $(PUT_PROGS) $(GET_PROGS)
 
 # Default library, for linking applications
@@ -198,14 +198,14 @@ transform.h :
 	echo "#endif /* __TRANSFORM_H */"				>>$@
 
 install.progs: $(AUTO_SRC) $(PROGS) $(DESTDIR)$(bindir)
-	$(LIBTOOL_INSTALL) $(INSTALL_PROG) tic$x     $(DESTDIR)$(bindir)/$(actual_tic)
-	$(LIBTOOL_INSTALL) $(INSTALL_PROG) toe$x     $(DESTDIR)$(bindir)/$(actual_toe)
-	@echo "linking $(actual_infotocap) to $(actual_tic)"
-	-@rm -f $(DESTDIR)$(bindir)/$(actual_infotocap)
-	(cd $(DESTDIR)$(bindir) && $(LN_S) $(actual_tic) $(actual_infotocap))
-	@echo "linking $(actual_captoinfo) to $(actual_tic)"
-	-@rm -f $(DESTDIR)$(bindir)/$(actual_captoinfo)
-	(cd $(DESTDIR)$(bindir) && $(LN_S) $(actual_tic) $(actual_captoinfo))
+#	$(LIBTOOL_INSTALL) $(INSTALL_PROG) tic$x     $(DESTDIR)$(bindir)/$(actual_tic)
+#	$(LIBTOOL_INSTALL) $(INSTALL_PROG) toe$x     $(DESTDIR)$(bindir)/$(actual_toe)
+#	@echo "linking $(actual_infotocap) to $(actual_tic)"
+#	-@rm -f $(DESTDIR)$(bindir)/$(actual_infotocap)
+#	(cd $(DESTDIR)$(bindir) && $(LN_S) $(actual_tic) $(actual_infotocap))
+#	@echo "linking $(actual_captoinfo) to $(actual_tic)"
+#	-@rm -f $(DESTDIR)$(bindir)/$(actual_captoinfo)
+#	(cd $(DESTDIR)$(bindir) && $(LN_S) $(actual_tic) $(actual_captoinfo))
 	$(LIBTOOL_INSTALL) $(INSTALL_PROG) infocmp$x $(DESTDIR)$(bindir)/$(actual_infocmp)
 	$(LIBTOOL_INSTALL) $(INSTALL_PROG) clear$x   $(DESTDIR)$(bindir)/$(actual_clear)
 	$(LIBTOOL_INSTALL) $(INSTALL_PROG) tabs$x    $(DESTDIR)$(bindir)/$(actual_tabs)
@@ -216,10 +216,10 @@ install.progs: $(AUTO_SRC) $(PROGS) $(DESTDIR)$(bindir)
 	(cd $(DESTDIR)$(bindir) && $(LN_S) $(actual_tset) $(actual_reset))
 
 uninstall.progs:
-	-@$(LIBTOOL_CLEAN) rm -f $(DESTDIR)$(bindir)/$(actual_tic)
-	-@$(LIBTOOL_CLEAN) rm -f $(DESTDIR)$(bindir)/$(actual_toe)
-	-@rm -f $(DESTDIR)$(bindir)/$(actual_captoinfo)
-	-@rm -f $(DESTDIR)$(bindir)/$(actual_infotocap)
+#	-@$(LIBTOOL_CLEAN) rm -f $(DESTDIR)$(bindir)/$(actual_tic)
+#	-@$(LIBTOOL_CLEAN) rm -f $(DESTDIR)$(bindir)/$(actual_toe)
+#	-@rm -f $(DESTDIR)$(bindir)/$(actual_captoinfo)
+#	-@rm -f $(DESTDIR)$(bindir)/$(actual_infotocap)
 	-@$(LIBTOOL_CLEAN) rm -f $(DESTDIR)$(bindir)/$(actual_infocmp)
 	-@$(LIBTOOL_CLEAN) rm -f $(DESTDIR)$(bindir)/$(actual_clear)
 	-@$(LIBTOOL_CLEAN) rm -f $(DESTDIR)$(bindir)/$(actual_tabs)
@@ -327,8 +327,8 @@ $(DEPS_CURSES) :
 	cd ../ncurses; $(MAKE) $(CF_MFLAGS)
 
 lint:
-	$(LINT) $(LINT_OPTS) $(CPPFLAGS) $(srcdir)/tic.c     $(srcdir)/dump_entry.c $(LINT_LIBS)
-	$(LINT) $(LINT_OPTS) $(CPPFLAGS) $(srcdir)/toe.c     $(srcdir)/dump_entry.c $(LINT_LIBS)
+#	$(LINT) $(LINT_OPTS) $(CPPFLAGS) $(srcdir)/tic.c     $(srcdir)/dump_entry.c $(LINT_LIBS)
+#	$(LINT) $(LINT_OPTS) $(CPPFLAGS) $(srcdir)/toe.c     $(srcdir)/dump_entry.c $(LINT_LIBS)
 	$(LINT) $(LINT_OPTS) $(CPPFLAGS) $(srcdir)/clear.c                          $(LINT_LIBS)
 	$(LINT) $(LINT_OPTS) $(CPPFLAGS) $(srcdir)/infocmp.c $(srcdir)/dump_entry.c $(LINT_LIBS)
 	$(LINT) $(LINT_OPTS) $(CPPFLAGS) $(srcdir)/tabs.c                           $(LINT_LIBS)

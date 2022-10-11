@@ -20,7 +20,7 @@
 #define COB_BLD_CC "/home/wmealing/Projects/emsdk/upstream/emscripten/emcc"
 
 /* informational: compiler flags during compilation */
-#define COB_BLD_CFLAGS "-I/home/wmealing/Projects/cobweb-test/cob-webber/dist/include -L/home/wmealing/Projects/cobweb-test/cob-webber/dist/lib  -pipe -finline-functions -fsigned-char -Wall -Wwrite-strings -Wmissing-prototypes -Wno-format-y2k"
+#define COB_BLD_CFLAGS "-I/home/wmealing/Projects/build-test/cob-webber/dist/include -L/home/wmealing/Projects/build-test/cob-webber/dist/lib  -pipe -finline-functions -fsigned-char -Wall -Wwrite-strings -Wmissing-prototypes -Wno-format-y2k"
 
 /* informational: preparser flags during compilation */
 #define COB_BLD_CPPFLAGS ""
@@ -35,16 +35,16 @@
 #define COB_CC "/home/wmealing/Projects/emsdk/upstream/emscripten/emcc"
 
 /* compiler flags passed to compiler by cobc */
-#define COB_CFLAGS "-I/home/wmealing/Projects/cobweb-test/cob-webber/dist/include -L/home/wmealing/Projects/cobweb-test/cob-webber/dist/lib -pipe -I/home/wmealing/Projects/cobweb-test/cob-webber/dist/include -Wno-unused -fsigned-char -Wno-pointer-sign"
+#define COB_CFLAGS "-I/home/wmealing/Projects/build-test/cob-webber/dist/include -L/home/wmealing/Projects/build-test/cob-webber/dist/lib -pipe -I/home/wmealing/Projects/build-test/cob-webber/dist/include -Wno-unused -fsigned-char -Wno-pointer-sign"
 
 /* Compilation of computed gotos works */
 #define COB_COMPUTED_GOTO 1
 
 /* default search path for copybooks */
-#define COB_CONFIG_DIR "/home/wmealing/Projects/cobweb-test/cob-webber/dist/share/gnucobol/config"
+#define COB_CONFIG_DIR "/home/wmealing/Projects/build-test/cob-webber/dist/share/gnucobol/config"
 
 /* default search path for configuration files */
-#define COB_COPY_DIR "/home/wmealing/Projects/cobweb-test/cob-webber/dist/share/gnucobol/copy"
+#define COB_COPY_DIR "/home/wmealing/Projects/build-test/cob-webber/dist/share/gnucobol/copy"
 
 /* Compile/link option for debugging */
 #define COB_DEBUG_FLAGS "-ggdb3 -fasynchronous-unwind-tables"
@@ -68,10 +68,10 @@
 #define COB_LDFLAGS ""
 
 /* default search path for extra modules */
-#define COB_LIBRARY_PATH "/home/wmealing/Projects/cobweb-test/cob-webber/dist/lib/gnucobol"
+#define COB_LIBRARY_PATH "/home/wmealing/Projects/build-test/cob-webber/dist/lib/gnucobol"
 
 /* libraries passed to linker by cobc */
-#define COB_LIBS "-L/home/wmealing/Projects/cobweb-test/cob-webber/dist/lib -lcob -lm"
+#define COB_LIBS "-L/home/wmealing/Projects/build-test/cob-webber/dist/lib -lcob -lm"
 
 /* long int is long long */
 /* #undef COB_LI_IS_LL */
@@ -128,10 +128,10 @@
 #define HAVE_CLOCK_GETTIME 1
 
 /* curses has color_set function */
-/* #undef HAVE_COLOR_SET */
+#define HAVE_COLOR_SET 1
 
 /* ncurses has _nc_freeall function */
-/* #undef HAVE_CURSES_FREEALL */
+#define HAVE_CURSES_FREEALL 1
 
 /* Define to 1 if you have the <curses.h> header file. */
 /* #undef HAVE_CURSES_H */
@@ -152,7 +152,7 @@
 #define HAVE_DECL_FMEMOPEN 1
 
 /* curses has define_key function */
-/* #undef HAVE_DEFINE_KEY */
+#define HAVE_DEFINE_KEY 1
 
 /* Has designated initializers */
 #define HAVE_DESIGNATED_INITS 1
@@ -200,7 +200,7 @@
 #define HAVE_GMP_H 1
 
 /* curses has has_mouse function */
-/* #undef HAVE_HAS_MOUSE */
+#define HAVE_HAS_MOUSE 1
 
 /* Define if you have the iconv() function and it works. */
 /* #undef HAVE_ICONV */
@@ -221,7 +221,7 @@
 /* #undef HAVE_LIBCURSES */
 
 /* Define to 1 if you have the `ncurses' library (-lncurses). */
-/* #undef HAVE_LIBNCURSES */
+#define HAVE_LIBNCURSES 1
 
 /* Define to 1 if you have the `ncursesw' library (-lncursesw). */
 /* #undef HAVE_LIBNCURSESW */
@@ -257,7 +257,7 @@
 /* #undef HAVE_MINIX_CONFIG_H */
 
 /* curses has mouseinterval function */
-/* #undef HAVE_MOUSEINTERVAL */
+#define HAVE_MOUSEINTERVAL 1
 
 /* Define to 1 if you have the <mpir.h> header file. */
 /* #undef HAVE_MPIR_H */
@@ -278,7 +278,7 @@
 /* #undef HAVE_NCURSES_H */
 
 /* Define to 1 if you have the <ncurses/ncurses.h> header file. */
-/* #undef HAVE_NCURSES_NCURSES_H */
+#define HAVE_NCURSES_NCURSES_H 1
 
 /* Define to 1 if you have the <pdcurses.h> header file. */
 /* #undef HAVE_PDCURSES_H */
@@ -371,7 +371,7 @@
 #define HAVE_UNISTD_H 1
 
 /* ncurses has use_legacy_coding function */
-/* #undef HAVE_USE_LEGACY_CODING */
+#define HAVE_USE_LEGACY_CODING 1
 
 /* Define to 1 if you have the <vbisam.h> header file. */
 /* #undef HAVE_VBISAM_H */
@@ -521,7 +521,7 @@
 /* #undef WITH_CJSON */
 
 /* curses library for extended SCREEN I/O */
-#define WITH_CURSES "not found"
+#define WITH_CURSES "ncurses"
 
 /* Use Berkeley DB library as INDEXED handler */
 /* #undef WITH_DB */

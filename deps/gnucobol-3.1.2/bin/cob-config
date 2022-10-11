@@ -21,14 +21,14 @@
 # along with GnuCOBOL.  If not, see <https://www.gnu.org/licenses/>.
 
 
-prefix=/home/wmealing/Projects/cobweb-test/cob-webber/dist
+prefix=/home/wmealing/Projects/build-test/cob-webber/dist
 exec_prefix=${prefix}
 exec_prefix_set=no
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
 
 version="3.1.2.0"
-cflags="-I/home/wmealing/Projects/cobweb-test/cob-webber/dist/include -L/home/wmealing/Projects/cobweb-test/cob-webber/dist/lib -pipe -I/home/wmealing/Projects/cobweb-test/cob-webber/dist/include -Wno-unused -fsigned-char -Wno-pointer-sign"
+cflags="-I/home/wmealing/Projects/build-test/cob-webber/dist/include -L/home/wmealing/Projects/build-test/cob-webber/dist/lib -pipe -I/home/wmealing/Projects/build-test/cob-webber/dist/include -Wno-unused -fsigned-char -Wno-pointer-sign"
 libs="-L${exec_prefix}/lib -lcob -lm"
 
 THIS="libcob (GnuCOBOL)"

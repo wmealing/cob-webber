@@ -2622,7 +2622,7 @@ char cos ();
 conftest.c:68:6: note: 'cos' is a builtin with type 'double (double)'
 1 warning generated.
 wasm-ld: warning: function signature mismatch: cos
->>> defined as () -> i32 in /tmp/emscripten_temp_1mfwdsau/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_twpaynsl/conftest_0.o
 >>> defined as (f64) -> f64 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(cos.o)
 configure:23935: $? = 0
 configure:23944: result: yes
@@ -7031,7 +7031,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _attr_get may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmp3nr4m5ft.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpsag84a5w.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -7149,7 +7149,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _cputime may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmp74yc6l_u.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmp3oh4y3nl.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -7264,14 +7264,14 @@ configure:24635: result: yes
 configure:24635: checking for getrusage
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: getrusage
->>> defined as () -> i32 in /tmp/emscripten_temp_dstnfudf/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_y9g0y0bg/conftest_0.o
 >>> defined as (i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(getrusage.o)
 configure:24635: $? = 0
 configure:24635: result: yes
 configure:24635: checking for gettimeofday
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: gettimeofday
->>> defined as () -> i32 in /tmp/emscripten_temp_pzjh4lr5/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_5pd342nl/conftest_0.o
 >>> defined as (i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(emscripten_time.o)
 configure:24635: $? = 0
 configure:24635: result: yes
@@ -7282,7 +7282,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _getsysinfo may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmprv5zpdji.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpzrr8h48t.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -7405,28 +7405,28 @@ char memset ();
 conftest.c:94:6: note: 'memset' is a builtin with type 'void *(void *, int, unsigned long)'
 1 warning generated.
 wasm-ld: warning: function signature mismatch: memset
->>> defined as () -> i32 in /tmp/emscripten_temp_65y0hmck/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_8chqnmtx/conftest_0.o
 >>> defined as (i32, i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(emscripten_memset.o)
 configure:24635: $? = 0
 configure:24635: result: yes
 configure:24635: checking for mmap
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: mmap
->>> defined as () -> i32 in /tmp/emscripten_temp_h80oac5r/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_94wqks82/conftest_0.o
 >>> defined as (i32, i32, i32, i32, i32, i64) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(mmap.o)
 configure:24635: $? = 0
 configure:24635: result: yes
 configure:24635: checking for mprotect
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: mprotect
->>> defined as () -> i32 in /tmp/emscripten_temp_nwmi4su0/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_oq7ydi9v/conftest_0.o
 >>> defined as (i32, i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(mprotect.o)
 configure:24635: $? = 0
 configure:24635: result: yes
 configure:24635: checking for nl_langinfo
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: nl_langinfo
->>> defined as () -> i32 in /tmp/emscripten_temp_dbo2bghh/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_g_ttinr0/conftest_0.o
 >>> defined as (i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(langinfo.o)
 configure:24635: $? = 0
 configure:24635: result: yes
@@ -7437,7 +7437,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _obstack_vprintf may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmp2pbg90ih.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpfu9oukpx.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -7556,7 +7556,7 @@ configure:24635: result: no
 configure:24635: checking for popen
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: popen
->>> defined as () -> i32 in /tmp/emscripten_temp_fxdxmajw/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_mxz7eovy/conftest_0.o
 >>> defined as (i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libstubs-debug.a(emscripten_libc_stubs.o)
 configure:24635: $? = 0
 configure:24635: result: yes
@@ -7567,7 +7567,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _processor_info may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpf6_sz86p.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmphfk30y37.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -7691,7 +7691,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _pstat_getprocessor may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpt80kf85_.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpufsb3590.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -7811,7 +7811,7 @@ configure:24635: result: no
 configure:24635: checking for raise
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: raise
->>> defined as () -> i32 in /tmp/emscripten_temp_g6wsvwv8/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp__z8_2_aj/conftest_0.o
 >>> defined as (i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(raise.o)
 configure:24635: $? = 0
 configure:24635: result: yes
@@ -7822,7 +7822,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _read_real_time may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmp0nvcib7q.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpsafjrvra.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -7943,14 +7943,14 @@ configure:24635: result: no
 configure:24635: checking for sigaction
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: sigaction
->>> defined as () -> i32 in /tmp/emscripten_temp_uwc_i139/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_mbe_0bmi/conftest_0.o
 >>> defined as (i32, i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(sigaction.o)
 configure:24635: $? = 0
 configure:24635: result: yes
 configure:24635: checking for sigaltstack
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: sigaltstack
->>> defined as () -> i32 in /tmp/emscripten_temp_mp6w1sas/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_2djptzbp/conftest_0.o
 >>> defined as (i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libstubs-debug.a(emscripten_libc_stubs.o)
 configure:24635: $? = 0
 configure:24635: result: yes
@@ -7961,7 +7961,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _sigstack may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpx6epoez9.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpglif9yzy.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -8088,7 +8088,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _syssgi may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpljoc86d0.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpagrupv30.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -8216,7 +8216,7 @@ char strchr ();
 conftest.c:102:6: note: 'strchr' is a builtin with type 'char *(const char *, int)'
 1 warning generated.
 wasm-ld: warning: function signature mismatch: strchr
->>> defined as () -> i32 in /tmp/emscripten_temp_bhucgsnp/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_uxne95xf/conftest_0.o
 >>> defined as (i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(strchr.o)
 configure:24635: $? = 0
 configure:24635: result: yes
@@ -8228,14 +8228,14 @@ char strerror ();
 conftest.c:103:6: note: 'strerror' is a builtin with type 'char *(int)'
 1 warning generated.
 wasm-ld: warning: function signature mismatch: strerror
->>> defined as () -> i32 in /tmp/emscripten_temp_u4m3brmd/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_9fm5wix7/conftest_0.o
 >>> defined as (i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(strerror.o)
 configure:24635: $? = 0
 configure:24635: result: yes
 configure:24635: checking for strnlen
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: strnlen
->>> defined as () -> i32 in /tmp/emscripten_temp_8bxmtixe/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_cf8qb789/conftest_0.o
 >>> defined as (i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(strnlen.o)
 configure:24635: $? = 0
 configure:24635: result: yes
@@ -8247,7 +8247,7 @@ char strtol ();
 conftest.c:105:6: note: 'strtol' is a builtin with type 'long (const char *, char **, int)'
 1 warning generated.
 wasm-ld: warning: function signature mismatch: strtol
->>> defined as () -> i32 in /tmp/emscripten_temp_9tjz25wd/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_8zr85l40/conftest_0.o
 >>> defined as (i32, i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(strtol.o)
 configure:24635: $? = 0
 configure:24635: result: yes
@@ -8259,14 +8259,14 @@ char strtoul ();
 conftest.c:106:6: note: 'strtoul' is a builtin with type 'unsigned long (const char *, char **, int)'
 1 warning generated.
 wasm-ld: warning: function signature mismatch: strtoul
->>> defined as () -> i32 in /tmp/emscripten_temp_cvdazmr_/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_gtntl9uj/conftest_0.o
 >>> defined as (i32, i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(strtol.o)
 configure:24635: $? = 0
 configure:24635: result: yes
 configure:24635: checking for sysconf
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: sysconf
->>> defined as () -> i32 in /tmp/emscripten_temp_ldvpma9o/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_ygxuhl66/conftest_0.o
 >>> defined as (i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(sysconf.o)
 configure:24635: $? = 0
 configure:24635: result: yes
@@ -8277,7 +8277,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _sysctl may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmppfuk7tdv.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmp_9qd2w_g.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -8410,7 +8410,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _sysctlbyname may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpfsvjads8.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpk19nae55.json' failed (returned 1)
 configure:24635: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -8539,14 +8539,14 @@ configure:24635: result: no
 configure:24635: checking for times
 configure:24635: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: times
->>> defined as () -> i32 in /tmp/emscripten_temp__bib7nyd/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_ywk466dh/conftest_0.o
 >>> defined as (i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libstubs-debug.a(emscripten_libc_stubs.o)
 configure:24635: $? = 0
 configure:24635: result: yes
 configure:24651: checking for library containing clock_gettime
 configure:24682: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c  >&5
 wasm-ld: warning: function signature mismatch: clock_gettime
->>> defined as () -> i32 in /tmp/emscripten_temp_3ik18alb/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_acmbrkzw/conftest_0.o
 >>> defined as (i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(emscripten_time.o)
 configure:24682: $? = 0
 configure:24699: result: none required
@@ -8558,7 +8558,7 @@ char vsnprintf ();
 conftest.c:110:6: note: 'vsnprintf' is a builtin with type 'int (char *, unsigned long, const char *, __builtin_va_list)'
 1 warning generated.
 wasm-ld: warning: function signature mismatch: vsnprintf
->>> defined as () -> i32 in /tmp/emscripten_temp_li7nvrfk/conftest_0.o
+>>> defined as () -> i32 in /tmp/emscripten_temp_ixpb73vj/conftest_0.o
 >>> defined as (i32, i32, i32, i32) -> i32 in /home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libc-debug.a(vsnprintf.o)
 configure:24715: $? = 0
 configure:24715: result: yes
@@ -8937,7 +8937,7 @@ configure:27566: result: yes
 configure:27604: checking for tputs in -lncurses
 configure:27629: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c -lncurses   >&5
 wasm-ld: error: unable to find library -lncurses
-emcc: error: '/home/wmealing/Projects/emsdk/upstream/bin/wasm-ld -o conftest.wasm /tmp/emscripten_temp_114gfxak/conftest_0.o -lncurses -L/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -lGL -lal -lhtml5 -lstubs-debug -lc-debug -ldlmalloc -lcompiler_rt -lc++-noexcept -lc++abi-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --import-undefined --strip-debug --export-if-defined=main --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=__main_argc_argv --export-if-defined=fflush --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_init --export=stackSave --export=stackRestore --export=stackAlloc --export=__wasm_call_ctors --export=__errno_location --export=__get_temp_ret --export=__set_temp_ret --export=__funcs_on_exit --export-table -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/upstream/bin/wasm-ld -o conftest.wasm /tmp/emscripten_temp_tko0mhs_/conftest_0.o -lncurses -L/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -lGL -lal -lhtml5 -lstubs-debug -lc-debug -ldlmalloc -lcompiler_rt -lc++-noexcept -lc++abi-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --import-undefined --strip-debug --export-if-defined=main --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=__main_argc_argv --export-if-defined=fflush --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_init --export=stackSave --export=stackRestore --export=stackAlloc --export=__wasm_call_ctors --export=__errno_location --export=__get_temp_ret --export=__set_temp_ret --export=__funcs_on_exit --export-table -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (returned 1)
 configure:27629: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -9054,7 +9054,7 @@ configure:27638: result: no
 configure:27643: checking for tputs in -lcurses
 configure:27668: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c -lcurses   >&5
 wasm-ld: error: unable to find library -lcurses
-emcc: error: '/home/wmealing/Projects/emsdk/upstream/bin/wasm-ld -o conftest.wasm /tmp/emscripten_temp_n3t5afdb/conftest_0.o -lcurses -L/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -lGL -lal -lhtml5 -lstubs-debug -lc-debug -ldlmalloc -lcompiler_rt -lc++-noexcept -lc++abi-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --import-undefined --strip-debug --export-if-defined=main --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=__main_argc_argv --export-if-defined=fflush --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_init --export=stackSave --export=stackRestore --export=stackAlloc --export=__wasm_call_ctors --export=__errno_location --export=__get_temp_ret --export=__set_temp_ret --export=__funcs_on_exit --export-table -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/upstream/bin/wasm-ld -o conftest.wasm /tmp/emscripten_temp_o17blu8v/conftest_0.o -lcurses -L/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -lGL -lal -lhtml5 -lstubs-debug -lc-debug -ldlmalloc -lcompiler_rt -lc++-noexcept -lc++abi-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --import-undefined --strip-debug --export-if-defined=main --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=__main_argc_argv --export-if-defined=fflush --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_init --export=stackSave --export=stackRestore --export=stackAlloc --export=__wasm_call_ctors --export=__errno_location --export=__get_temp_ret --export=__set_temp_ret --export=__funcs_on_exit --export-table -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (returned 1)
 configure:27668: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -9171,7 +9171,7 @@ configure:27677: result: no
 configure:27690: checking for readline in -lreadline
 configure:27715: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c -lreadline   >&5
 wasm-ld: error: unable to find library -lreadline
-emcc: error: '/home/wmealing/Projects/emsdk/upstream/bin/wasm-ld -o conftest.wasm /tmp/emscripten_temp_6230y9y3/conftest_0.o -lreadline -L/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -lGL -lal -lhtml5 -lstubs-debug -lc-debug -ldlmalloc -lcompiler_rt -lc++-noexcept -lc++abi-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --import-undefined --strip-debug --export-if-defined=main --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=__main_argc_argv --export-if-defined=fflush --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_init --export=stackSave --export=stackRestore --export=stackAlloc --export=__wasm_call_ctors --export=__errno_location --export=__get_temp_ret --export=__set_temp_ret --export=__funcs_on_exit --export-table -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/upstream/bin/wasm-ld -o conftest.wasm /tmp/emscripten_temp_dn7cnru8/conftest_0.o -lreadline -L/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -lGL -lal -lhtml5 -lstubs-debug -lc-debug -ldlmalloc -lcompiler_rt -lc++-noexcept -lc++abi-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --import-undefined --strip-debug --export-if-defined=main --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=__main_argc_argv --export-if-defined=fflush --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_init --export=stackSave --export=stackRestore --export=stackAlloc --export=__wasm_call_ctors --export=__errno_location --export=__get_temp_ret --export=__set_temp_ret --export=__funcs_on_exit --export-table -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (returned 1)
 configure:27715: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -9304,7 +9304,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _yywrap may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpfogwukph.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmp4ljy2pt5.json' failed (returned 1)
 configure:27904: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -11184,7 +11184,7 @@ configure: failed program was:
 | }
 configure:27904: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c -lfl  >&5
 wasm-ld: error: unable to find library -lfl
-emcc: error: '/home/wmealing/Projects/emsdk/upstream/bin/wasm-ld -o conftest.wasm /tmp/emscripten_temp_j5x2i_d1/conftest_0.o -lfl -L/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -lGL -lal -lhtml5 -lstubs-debug -lc-debug -ldlmalloc -lcompiler_rt -lc++-noexcept -lc++abi-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --import-undefined --strip-debug --export-if-defined=main --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=__main_argc_argv --export-if-defined=fflush --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_init --export=stackSave --export=stackRestore --export=stackAlloc --export=__wasm_call_ctors --export=__errno_location --export=__get_temp_ret --export=__set_temp_ret --export=__funcs_on_exit --export-table -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/upstream/bin/wasm-ld -o conftest.wasm /tmp/emscripten_temp_7i9yuyn5/conftest_0.o -lfl -L/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -lGL -lal -lhtml5 -lstubs-debug -lc-debug -ldlmalloc -lcompiler_rt -lc++-noexcept -lc++abi-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --import-undefined --strip-debug --export-if-defined=main --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=__main_argc_argv --export-if-defined=fflush --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_init --export=stackSave --export=stackRestore --export=stackAlloc --export=__wasm_call_ctors --export=__errno_location --export=__get_temp_ret --export=__set_temp_ret --export=__funcs_on_exit --export-table -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (returned 1)
 configure:27904: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -13064,7 +13064,7 @@ configure: failed program was:
 | }
 configure:27904: /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -o conftest    conftest.c -ll  >&5
 wasm-ld: error: unable to find library -ll
-emcc: error: '/home/wmealing/Projects/emsdk/upstream/bin/wasm-ld -o conftest.wasm /tmp/emscripten_temp_m_m20xo9/conftest_0.o -ll -L/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -lGL -lal -lhtml5 -lstubs-debug -lc-debug -ldlmalloc -lcompiler_rt -lc++-noexcept -lc++abi-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --import-undefined --strip-debug --export-if-defined=main --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=__main_argc_argv --export-if-defined=fflush --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_init --export=stackSave --export=stackRestore --export=stackAlloc --export=__wasm_call_ctors --export=__errno_location --export=__get_temp_ret --export=__set_temp_ret --export=__funcs_on_exit --export-table -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/upstream/bin/wasm-ld -o conftest.wasm /tmp/emscripten_temp_les0pzhx/conftest_0.o -ll -L/home/wmealing/Projects/emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten -lGL -lal -lhtml5 -lstubs-debug -lc-debug -ldlmalloc -lcompiler_rt -lc++-noexcept -lc++abi-noexcept -lsockets -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr --import-undefined --strip-debug --export-if-defined=main --export-if-defined=__start_em_asm --export-if-defined=__stop_em_asm --export-if-defined=__start_em_js --export-if-defined=__stop_em_js --export-if-defined=__main_argc_argv --export-if-defined=fflush --export=emscripten_stack_get_end --export=emscripten_stack_get_free --export=emscripten_stack_get_base --export=emscripten_stack_init --export=stackSave --export=stackRestore --export=stackAlloc --export=__wasm_call_ctors --export=__errno_location --export=__get_temp_ret --export=__set_temp_ret --export=__funcs_on_exit --export-table -z stack-size=5242880 --initial-memory=16777216 --no-entry --max-memory=16777216 --global-base=1024' failed (returned 1)
 configure:27904: $? = 1
 configure: failed program was:
 | /* confdefs.h */
@@ -14950,7 +14950,7 @@ warning: Link with `-sLLD_REPORT_UNDEFINED` to get more information on undefined
 warning: To disable errors for undefined symbols use `-sERROR_ON_UNDEFINED_SYMBOLS=0`
 warning: _yywrap may need to be added to EXPORTED_FUNCTIONS if it arrives from a system library
 Error: Aborting compilation due to previous errors
-emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmpclrmpdu6.json' failed (returned 1)
+emcc: error: '/home/wmealing/Projects/emsdk/node/14.18.2_64bit/bin/node /home/wmealing/Projects/emsdk/upstream/emscripten/src/compiler.js /tmp/tmp5v7j2zwx.json' failed (returned 1)
 configure:27937: $? = 1
 configure: failed program was:
 | /* confdefs.h */

@@ -20,8 +20,8 @@
 # You should have received a copy of the GNU General Public License
 # along with GnuCOBOL.  If not, see <https://www.gnu.org/licenses/>.
 
-PATH="/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs:${PATH}"
-PATH="/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/cobc:/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/bin:${PATH}"
+PATH="/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs:${PATH}"
+PATH="/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/cobc:/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/bin:${PATH}"
 export PATH
 
 
@@ -34,20 +34,20 @@ GNUCOBOL_ENV_SETUP=1
 export GNUCOBOL_ENV_SETUP
 
 # entries likely referenced in the LIBS entries below
-prefix="/home/wmealing/Projects/cobweb-test/cob-webber/dist"
+prefix="/home/wmealing/Projects/build-test/cob-webber/dist"
 exec_prefix="${prefix}"
 
 # options that are also used in atlocal (always add to both)
-COB_CFLAGS="-I/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2 -I/home/wmealing/Projects/cobweb-test/cob-webber/dist/include -L/home/wmealing/Projects/cobweb-test/cob-webber/dist/lib -pipe -I/home/wmealing/Projects/cobweb-test/cob-webber/dist/include -Wno-unused -fsigned-char -Wno-pointer-sign ${COB_CFLAGS}"
+COB_CFLAGS="-I/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2 -I/home/wmealing/Projects/build-test/cob-webber/dist/include -L/home/wmealing/Projects/build-test/cob-webber/dist/lib -pipe -I/home/wmealing/Projects/build-test/cob-webber/dist/include -Wno-unused -fsigned-char -Wno-pointer-sign ${COB_CFLAGS}"
 COB_LDFLAGS=" ${COB_LDFLAGS}"
-COB_LIBS="-L/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs -L${exec_prefix}/lib -lcob -lm ${COB_LIBS}"
-COB_CONFIG_DIR="/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/config"
-COB_COPY_DIR="/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/copy"
-LD_LIBRARY_PATH="/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs:${LD_LIBRARY_PATH}"     # GNU/Linux, Solaris, ...
-DYLD_LIBRARY_PATH="/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs:{$DYLD_LIBRARY_PATH}" # Mac OS
-SHLIB_PATH="/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs:${SHLIB_PATH}"               # HP-UX
-LIBPATH="/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs:${LIBPATH}"                     # AIX
-COB_LIBRARY_PATH="/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2/extras:${COB_LIBRARY_PATH}"         # only in pre-inst case: prepend
+COB_LIBS="-L/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs -L${exec_prefix}/lib -lcob -lm ${COB_LIBS}"
+COB_CONFIG_DIR="/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/config"
+COB_COPY_DIR="/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/copy"
+LD_LIBRARY_PATH="/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs:${LD_LIBRARY_PATH}"     # GNU/Linux, Solaris, ...
+DYLD_LIBRARY_PATH="/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs:{$DYLD_LIBRARY_PATH}" # Mac OS
+SHLIB_PATH="/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs:${SHLIB_PATH}"               # HP-UX
+LIBPATH="/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/libcob/.libs:${LIBPATH}"                     # AIX
+COB_LIBRARY_PATH="/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2/extras:${COB_LIBRARY_PATH}"         # only in pre-inst case: prepend
 
 export COB_CFLAGS COB_LDFLAGS COB_LIBS
 export COB_CONFIG_DIR COB_COPY_DIR

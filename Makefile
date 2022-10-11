@@ -36,22 +36,34 @@ $(DEPS_OUT)/lib/libcob.a: $(DEPS_OUT)/lib/libgmp.a
 	cp ./deps/gnucobol-$(GNUCOBOL_VER)/libcob.h $(DEPS_OUT)/include
 
 
+fallback:
+	# now we build a 'falback terminfo to be embedded in the lib'
+	cd ./deps/ncurses-6.1/ncurses && tinfo/MKfallback.sh \
+					$(TERMINFO) " " \
+					../misc/terminfo.src \
+					`which tic` \
+					linux vt100 xterm xterm-color >fallback.c
+
 # mental note, this is a patched ncurses.61
-$(DEPS_OUT)/lib/libncurses.a:
+$(DEPS_OUT)/lib/libncurses.a: fallback
 	# Configure and make the native components
 	# the native is used because its used to generate $(GNUCOBOL_VER) during the build process.
 	# need terminfo or curses wont work... boo.
-	cd ./deps/ncurses-6.1 && ./configure  --without-cxx-binding  --prefix=$(DEPS_OUT) 
+	cd ./deps/ncurses-6.1 && ./configure  --without-cxx-binding  --prefix=$(DEPS_OUT) \
+					      --disable-gnat-projects \
+					      --disable-home-termifo 
 	make -C ./deps/ncurses-6.1
-	make -C ./deps/ncurses-6.1 install
-	#
-	#
+#	make -C ./deps/ncurses-6.1 install
+
 	# we end up building it twice but i dont think there is a better way.
 	# Configure and make the Emscripten components
 	cd ./deps/ncurses-6.1 && emconfigure ./configure --host none \
                                  --without-cxx-binding CFLAGS="$(CFLAGS) "  \
-                                 --build none --prefix=$(DEPS_OUT)
-	# copy the terminfo off, for inclusion.
+				 --disable-database --disable-gnat-projects \
+				 --disable-home-terminfo \
+                                 --build none --prefix=$(DEPS_OUT) \
+				 --with-fallbacks=linux,vt100,xterm,xterm-color
+
 	# these two patches prevent the webasm version of the webasm builds
 	# smashing the native builds.
 	make -C ./deps/ncurses-6.1 install.libs

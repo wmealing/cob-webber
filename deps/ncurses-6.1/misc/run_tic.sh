@@ -101,7 +101,7 @@ SHLIB_PATH=$PATH
 export SHLIB_PATH
 
 # set a variable to simplify environment update in shlib
-SHLIB_HOST=none
+SHLIB_HOST=linux-gnu
 export SHLIB_HOST
 
 # don't use user's TERMINFO variable

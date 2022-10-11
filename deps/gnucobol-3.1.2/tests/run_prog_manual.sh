@@ -27,7 +27,7 @@
 # if you want to use a different terminal/terminal manager than xterm/screen
 # or different options for these.
 
-abs_top_builddir="/home/wmealing/Projects/cobweb-test/cob-webber/deps/gnucobol-3.1.2"
+abs_top_builddir="/home/wmealing/Projects/build-test/cob-webber/deps/gnucobol-3.1.2"
 
 TIMEOUT=40        # timeout in seconds
 

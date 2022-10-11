@@ -63,7 +63,7 @@ includesubdir	= /ncurses
 INCLUDEDIR	= $(DESTDIR)$(includedir)$(includesubdir)
 
 tabsetdir	= $(datadir)/tabset
-ticdir		= /home/wmealing/Projects/build-test/cob-webber/dist/share/terminfo
+ticdir		= ${datarootdir}/terminfo
 ticfile		= $(ticdir).db
 source		= ${top_srcdir}/misc/terminfo.src
 

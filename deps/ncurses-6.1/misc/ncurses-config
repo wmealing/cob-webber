@@ -160,10 +160,10 @@ ENDECHO
 		echo "${mandir}"
 		;;
 	--terminfo)
-		echo "/home/wmealing/Projects/build-test/cob-webber/dist/share/terminfo"
+		echo "${datarootdir}/terminfo"
 		;;
 	--terminfo-dirs)
-		echo "/home/wmealing/Projects/build-test/cob-webber/dist/share/terminfo"
+		echo ""
 		;;
 	--termpath)
 		echo ""

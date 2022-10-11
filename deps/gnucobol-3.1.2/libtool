@@ -168,7 +168,7 @@ lock_old_archive_extraction=no
 LTCC="/home/wmealing/Projects/emsdk/upstream/emscripten/emcc"
 
 # LTCC compiler flags.
-LTCFLAGS="-I/home/wmealing/Projects/cobweb-test/cob-webber/dist/include -L/home/wmealing/Projects/cobweb-test/cob-webber/dist/lib  -pipe -finline-functions -fsigned-char -Wall -Wwrite-strings -Wmissing-prototypes -Wno-format-y2k"
+LTCFLAGS="-I/home/wmealing/Projects/build-test/cob-webber/dist/include -L/home/wmealing/Projects/build-test/cob-webber/dist/lib  -pipe -finline-functions -fsigned-char -Wall -Wwrite-strings -Wmissing-prototypes -Wno-format-y2k"
 
 # Take the output of nm and produce a listing of raw symbols and C names.
 global_symbol_pipe=""
