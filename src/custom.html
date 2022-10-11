@@ -4,13 +4,17 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Emscripten-Generated Code</title>
+    <link rel="stylesheet" href="xterm/css/xterm.css" />
+    <script src="xterm/lib/xterm.js"></script>
     <style>
+	body {
+  		background-color: #000000;
+		color: orange;  
+	}
       .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }
       textarea.emscripten { font-family: monospace; width: 80%; }
       div.emscripten { text-align: center; }
       div.emscripten_border { border: 1px solid black; }
-      /* the canvas *must not* have any border or padding, or mouse coords will be wrong */
-      canvas.emscripten { border: 0px none; background-color: black; }
 
       .spinner {
         height: 50px;
@@ -47,38 +51,33 @@
     </style>
   </head>
   <body>
-    <hr/>
     <figure style="overflow:visible;" id="spinner"><div class="spinner"></div><center style="margin-top:0.5em"><strong>emscripten</strong></center></figure>
     <div class="emscripten" id="status">Downloading...</div>
     <div class="emscripten">
       <progress value="0" max="100" id="progress" hidden=1></progress>  
     </div>
-    <div class="emscripten_border">
-      <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
-    </div>
-    <hr/>
-    <div class="emscripten">
-      <input type="checkbox" id="resize">Resize canvas
-      <input type="checkbox" id="pointerLock" checked>Lock/hide mouse pointer
-      &nbsp;&nbsp;&nbsp;
-      <input type="button" value="Fullscreen" onclick="Module.requestFullscreen(document.getElementById('pointerLock').checked, 
-                                                                                document.getElementById('resize').checked)">
-    </div>
-    
-    <hr/>
-    <textarea class="emscripten" id="output" rows="8"></textarea>
-    <hr>
+    <div id="terminal"></div>
     <script type='text/javascript'>
       var statusElement = document.getElementById('status');
       var progressElement = document.getElementById('progress');
       var spinnerElement = document.getElementById('spinner');
 
       var Module = {
-        preRun: [],
+        preRun: [function() {
+		    	function stdin() {
+                          prompt("> ")
+    			}
+			var stdout = null; // Keep as default
+    			var stderr = null;  // Keep as default
+    			FS.init(stdin, stdout, stderr);
+          ENV.TERM="xterm";
+	}],
         postRun: [],
         print: (function() {
-          var element = document.getElementById('output');
-          if (element) element.value = ''; // clear browser cache
+		var term = new Terminal();
+        	term.open(document.getElementById('terminal'));
+		term.focus();
+
           return function(text) {
             if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
             // These replacements are necessary if you render to raw HTML
@@ -87,21 +86,8 @@
             //text = text.replace(/>/g, "&gt;");
             //text = text.replace('\n', '<br>', 'g');
             console.log(text);
-            if (element) {
-              element.value += text + "\n";
-              element.scrollTop = element.scrollHeight; // focus on bottom
-            }
+	    term.write(text);
           };
-        })(),
-        canvas: (function() {
-          var canvas = document.getElementById('canvas');
-
-          // As a default initial behavior, pop up an alert when webgl context is lost. To make your
-          // application robust, you may want to override this behavior before shipping!
-          // See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
-          canvas.addEventListener("webglcontextlost", function(e) { alert('WebGL context lost. You will need to reload the page.'); e.preventDefault(); }, false);
-
-          return canvas;
         })(),
         setStatus: function(text) {
           if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
