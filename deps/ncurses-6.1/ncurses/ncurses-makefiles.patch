@@ -1,0 +1,38 @@
+233,246c233,246
+< make_keys$(BUILD_EXEEXT) : \
+< 		$(tinfo)/make_keys.c \
+< 		names.c
+< 	$(BUILD_CC) -o $@ $(BUILD_CPPFLAGS) $(BUILD_CCFLAGS) $(tinfo)/make_keys.c $(BUILD_LDFLAGS) $(BUILD_LIBS)
+< 
+< make_hash$(BUILD_EXEEXT) : \
+< 		$(tinfo)/make_hash.c \
+< 		../include/hashsize.h
+< 	$(BUILD_CC) -o $@ $(BUILD_CPPFLAGS) $(BUILD_CCFLAGS) $(tinfo)/make_hash.c $(BUILD_LDFLAGS) $(BUILD_LIBS)
+< 
+< report_offsets$(BUILD_EXEEXT) : \
+< 		$(srcdir)/report_offsets.c
+< 	$(BUILD_CC) -o $@ $(BUILD_CPPFLAGS) $(BUILD_CCFLAGS) $(srcdir)/report_offsets.c $(BUILD_LDFLAGS) $(BUILD_LIBS)
+< 	./report_offsets$(BUILD_EXEEXT)
+---
+> #make_keys$(BUILD_EXEEXT) : \
+> #		$(tinfo)/make_keys.c \
+> #		names.c
+> #	$(BUILD_CC) -o $@ $(BUILD_CPPFLAGS) $(BUILD_CCFLAGS) $(tinfo)/make_keys.c $(BUILD_LDFLAGS) $(BUILD_LIBS)
+> 
+> #make_hash$(BUILD_EXEEXT) : \
+> #		$(tinfo)/make_hash.c \
+> #		../include/hashsize.h
+> #	$(BUILD_CC) -o $@ $(BUILD_CPPFLAGS) $(BUILD_CCFLAGS) $(tinfo)/make_hash.c $(BUILD_LDFLAGS) $(BUILD_LIBS)
+> 
+> #report_offsets$(BUILD_EXEEXT) : \
+> #		$(srcdir)/report_offsets.c
+> #	$(BUILD_CC) -o $@ $(BUILD_CPPFLAGS) $(BUILD_CCFLAGS) $(srcdir)/report_offsets.c $(BUILD_LDFLAGS) $(BUILD_LIBS)
+> #	./report_offsets$(BUILD_EXEEXT)
+283,285c283,285
+< 	-rm -f make_keys$(BUILD_EXEEXT)
+< 	-rm -f make_hash$(BUILD_EXEEXT)
+< 	-rm -f report_offsets$(BUILD_EXEEXT)
+---
+> 	#-rm -f make_keys$(BUILD_EXEEXT)
+> 	#-rm -f make_hash$(BUILD_EXEEXT)
+> 	#-rm -f report_offsets$(BUILD_EXEEXT)
