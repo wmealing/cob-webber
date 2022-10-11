@@ -37,7 +37,7 @@
 SHELL		= /bin/sh
 
 
-CF_MFLAGS 	= -${MAKEFLAGS}
+CF_MFLAGS 	= 
 
 x		= 
 o		= .o
@@ -46,12 +46,12 @@ MODEL		= ../objects
 DESTDIR		= 
 top_srcdir	= ..
 srcdir		= .
-prefix		= /home/wmealing/Projects/cobweb-test/cobwebber/dist
+prefix		= /usr
 exec_prefix	= ${prefix}
 bindir		= ${exec_prefix}/bin
 libdir		= ${exec_prefix}/lib
 includedir	= ${prefix}/include
-includesubdir	= /ncurses
+includesubdir	= 
 
 INCLUDEDIR	= $(DESTDIR)$(includedir)$(includesubdir)
 
@@ -108,7 +108,7 @@ NCURSES_MINOR	= 1
 REL_VERSION     = 6.1
 ABI_VERSION	= 6
 
-LOCAL_LIBDIR	= /home/wmealing/Projects/cobweb-test/cobwebber/deps/ncurses-6.1/lib
+LOCAL_LIBDIR	= /home/wmealing/Projects/build-test/cob-webber/deps/ncurses-6.1/lib
 
 LINK		=  $(LIBTOOL_LINK) 
 SHLIB_DIRS	= -L../lib
@@ -299,7 +299,7 @@ lintlib :
 #  DoLinks:       yes
 #  rmSoLocs:      no
 #  ldconfig:      /usr/sbin/ldconfig
-#  overwrite:     no
+#  overwrite:     yes
 #  depend:        ../include/ncurses_cfg.h
 #  host:          x86_64-pc-linux-gnu
 
@@ -411,7 +411,7 @@ mostlyclean::
 #  DoLinks:       yes
 #  rmSoLocs:      no
 #  ldconfig:      /usr/sbin/ldconfig
-#  overwrite:     no
+#  overwrite:     yes
 #  depend:        ../include/ncurses_cfg.h
 #  host:          x86_64-pc-linux-gnu
 

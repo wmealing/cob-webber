@@ -46,7 +46,7 @@ o		= .o
 MODEL		= ../objects
 top_srcdir	= ..
 srcdir		= .
-prefix		= /home/wmealing/Projects/cobweb-test/cobwebber/dist
+prefix		= /home/wmealing/Projects/build-test/cob-webber/dist
 exec_prefix	= ${prefix}
 datarootdir	= ${prefix}/share
 
@@ -80,11 +80,11 @@ TRANSFORM	= sed 's/$x$$//'|sed '$(transform)'|sed 's/$$/$x/'
 CTAGS		= ctags
 ETAGS		= etags
 
-CC		= gnatgcc
-CPP		= gnatgcc -E
+CC		= /home/wmealing/Projects/emsdk/upstream/emscripten/emcc
+CPP		= /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -E
 
-CFLAGS		= -O2 --param max-inline-insns-single=1200 
-CPPFLAGS	= -I. -I$(srcdir) -I../test -DHAVE_CONFIG_H -DDATA_DIR=\"$(datadir)\" -I. -I../include  -D_GNU_SOURCE -D_DEFAULT_SOURCE -DNDEBUG
+CFLAGS		= -I/home/wmealing/Projects/build-test/cob-webber/dist/include -L/home/wmealing/Projects/build-test/cob-webber/dist/lib   
+CPPFLAGS	= -I. -I$(srcdir) -I../test -DHAVE_CONFIG_H -DDATA_DIR=\"$(datadir)\" -I. -I../include -D_POSIX_C_SOURCE=199506L -DNDEBUG
 
 CCFLAGS		= $(CPPFLAGS) $(CFLAGS)
 
@@ -92,18 +92,18 @@ CFLAGS_LIBTOOL	= $(CCFLAGS)
 CFLAGS_NORMAL	= $(CCFLAGS)
 CFLAGS_DEBUG	= $(CCFLAGS) -g -DTRACE
 CFLAGS_PROFILE	= $(CCFLAGS) -pg
-CFLAGS_SHARED	= $(CCFLAGS) -fPIC
+CFLAGS_SHARED	= $(CCFLAGS) unknown
 
 CFLAGS_DEFAULT	= $(CFLAGS_NORMAL)
 
 REL_VERSION	= 6.1
 ABI_VERSION	= 6
-LOCAL_LIBDIR	= /home/wmealing/Projects/cobweb-test/cobwebber/deps/ncurses-6.1/lib
+LOCAL_LIBDIR	= /home/wmealing/Projects/build-test/cob-webber/deps/ncurses-6.1/lib
 LOCAL_LIBS	= ../lib/libform.a ../lib/libmenu.a ../lib/libpanel.a ../lib/libncurses.a 
-MATH_LIB	= -lm
-TEST_LIBS	= -lutil
+MATH_LIB	= 
+TEST_LIBS	= 
 
-LD		= ld
+LD		= /home/wmealing/Projects/emsdk/upstream/emscripten/emcc
 LINK		=  $(LIBTOOL_LINK) $(CFLAGS)
 
 LDFLAGS		=   
@@ -114,7 +114,7 @@ LDFLAGS_DEBUG	= $(LDFLAGS) $(CFLAGS_DEBUG)
 LDFLAGS_PROFILE	= $(LDFLAGS) $(CFLAGS_PROFILE)
 LDFLAGS_SHARED	= $(LDFLAGS) $(CFLAGS_SHARED) 
 
-TEST_ARGS	=  -L../lib -lform -lmenu -lpanel -lncurses  
+TEST_ARGS	= -static -L../lib -lform -lmenu -lpanel -lncurses  -dynamic
 
 # use these for linking with all of the libraries
 LIBS_DEFAULT	= $(TEST_ARGS)  $(TEST_LIBS) $(MATH_LIB)
@@ -129,7 +129,7 @@ LIBS_CURSES	= `echo "$(TEST_ARGS) " | sed -e 's/-lform.*-lpanel[^ ]*//'` $(TEST_
 LDFLAGS_CURSES	= $(LDFLAGS_NORMAL) $(LIBS_CURSES)
 
 # use these for linking with the tinfo library if we have it, or curses library if not
-LIBS_TINFO	=  -lncurses   $(TEST_LIBS) $(MATH_LIB)
+LIBS_TINFO	= -static -lncurses -dynamic  $(TEST_LIBS) $(MATH_LIB)
 LDFLAGS_TINFO	= -L../lib $(LDFLAGS_NORMAL) $(LIBS_TINFO)
 
 LINT		= 
@@ -592,18 +592,18 @@ lintlib :
 #  suffix:        .a
 #  subset:        ticlib+termlib+ext_tinfo+base+ext_funcs
 #  driver:        no
-#  ShlibVer:      rel
+#  ShlibVer:      auto
 #  ShlibVerInfix: no
 #  SymLink:       ln -s -f
 #  TermlibRoot:   ncurses
 #  TermlibSuffix: .a
 #  ReLink:        no
-#  DoLinks:       yes
+#  DoLinks:       no
 #  rmSoLocs:      no
 #  ldconfig:      /usr/sbin/ldconfig
 #  overwrite:     no
 #  depend:        ../include/ncurses_cfg.h ./test.priv.h
-#  host:          x86_64-pc-linux-gnu
+#  host:          none-none-none
 
 NORMAL_OBJS = \
 	../objects/background$o \
@@ -1048,18 +1048,18 @@ clean ::
 #  suffix:        _g.a
 #  subset:        ticlib+termlib+ext_tinfo+base+ext_funcs
 #  driver:        no
-#  ShlibVer:      rel
+#  ShlibVer:      auto
 #  ShlibVerInfix: no
 #  SymLink:       ln -s -f
 #  TermlibRoot:   ncurses
 #  TermlibSuffix: .a
 #  ReLink:        no
-#  DoLinks:       yes
+#  DoLinks:       no
 #  rmSoLocs:      no
 #  ldconfig:      /usr/sbin/ldconfig
 #  overwrite:     no
 #  depend:        ../include/ncurses_cfg.h ./test.priv.h
-#  host:          x86_64-pc-linux-gnu
+#  host:          none-none-none
 
 DEBUG_OBJS = \
 	../obj_g/background$o \

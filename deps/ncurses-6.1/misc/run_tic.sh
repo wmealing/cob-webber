@@ -43,7 +43,7 @@ echo "** Building terminfo database, please wait..."
 
 : ${suffix:=}
 : ${DESTDIR:=}
-: ${prefix:=/home/wmealing/Projects/cobweb-test/cobwebber/dist}
+: ${prefix:=/home/wmealing/Projects/build-test/cob-webber/dist}
 : ${exec_prefix:=${prefix}}
 : ${bindir:=${exec_prefix}/bin}
 : ${top_srcdir:=..}
@@ -51,7 +51,7 @@ echo "** Building terminfo database, please wait..."
 : ${datarootdir:=${prefix}/share}
 : ${datadir:=${datarootdir}}
 : ${TIC_PATH:=/usr/bin/tic}
-: ${ticdir:=/home/wmealing/Projects/cobweb-test/cobwebber/dist/share/terminfo}
+: ${ticdir:=/home/wmealing/Projects/build-test/cob-webber/dist/share/terminfo}
 : ${source:=${top_srcdir}/misc/terminfo.src}
 : ${LN_S:="ln -s -f"}
 : ${cross_compiling:=no}
@@ -101,7 +101,7 @@ SHLIB_PATH=$PATH
 export SHLIB_PATH
 
 # set a variable to simplify environment update in shlib
-SHLIB_HOST=linux-gnu
+SHLIB_HOST=none
 export SHLIB_HOST
 
 # don't use user's TERMINFO variable

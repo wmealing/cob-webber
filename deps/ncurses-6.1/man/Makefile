@@ -39,7 +39,7 @@ SHELL		= /bin/sh
 
 DESTDIR		= 
 srcdir		= .
-prefix		= /home/wmealing/Projects/cobweb-test/cobwebber/dist
+prefix		= /home/wmealing/Projects/build-test/cob-webber/dist
 exec_prefix	= ${prefix}
 datarootdir	= ${prefix}/share
 datadir		= ${datarootdir}

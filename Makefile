@@ -10,6 +10,7 @@ all: gmp cob
 
 gmp: $(DEPS_OUT)/lib/libgmp.a
 cob: $(DEPS_OUT)/lib/libcob.a
+ncurses: $(DEPS_OUT)/lib/libncurses.a
 
 $(DEPS_OUT)/lib/libgmp.a:
 	cd ./deps/gmp-wasm && \
@@ -30,16 +31,32 @@ $(DEPS_OUT)/lib/libcob.a: $(DEPS_OUT)/lib/libgmp.a
 	cd ./deps/gnucobol-$(GNUCOBOL_VER) && emconfigure ./configure --host none --build none \
 	 	--without-db  CFLAGS="$(CFLAGS)" AR="emar" --disable-hardening \
 	 	--with-gmp=$(DEPS_OUT) --prefix=$(DEPS_OUT) 
-#	cp gnucobol-no-popen.patch ./deps/gnucobol-$(GNUCOBOL_VER)
-#	cp gnucobol-no-dlopen.patch ./deps/gnucobol-$(GNUCOBOL_VER)
-#	cp gnucobol-no-unused-arguements.patch ./deps/gnucobol-$(GNUCOBOL_VER)
-#	cd ./deps/gnucobol-$(GNUCOBOL_VER) && patch -p0 < gnucobol-no-popen.patch
-#	cd ./deps/gnucobol-$(GNUCOBOL_VER) && patch -p0 < gnucobol-no-dlopen.patch
-#	cd ./deps/gnucobol-$(GNUCOBOL_VER) && patch -p0 < gnucobol-no-unused-arguements.patch
-#	exit 
 	make -C ./deps/gnucobol-$(GNUCOBOL_VER) CFLAGS="$(CFLAGS)  -DCOB_BORKED_DLOPEN -DHAVE_UNISTD_H=false"  libcob  
 	make -C ./deps/gnucobol-$(GNUCOBOL_VER) install
 	cp ./deps/gnucobol-$(GNUCOBOL_VER)/libcob.h $(DEPS_OUT)/include
+
+
+# mental note, this is a patched ncurses.61
+$(DEPS_OUT)/lib/libncurses.a:
+	# Configure and make the native components
+	# the native is used because its used to generate $(GNUCOBOL_VER) during the build process.
+	# need terminfo or curses wont work... boo.
+	cd ./deps/ncurses-6.1 && ./configure  --without-cxx-binding  --prefix=$(DEPS_OUT) 
+	make -C ./deps/ncurses-6.1
+	make -C ./deps/ncurses-6.1 install
+	#
+	#
+	# we end up building it twice but i dont think there is a better way.
+	# Configure and make the Emscripten components
+	cd ./deps/ncurses-6.1 && emconfigure ./configure --host none \
+                                 --without-cxx-binding CFLAGS="$(CFLAGS) "  \
+                                 --build none --prefix=$(DEPS_OUT)
+	# copy the terminfo off, for inclusion.
+	# these two patches prevent the webasm version of the webasm builds
+	# smashing the native builds.
+	make -C ./deps/ncurses-6.1 install.libs
+	make -C ./deps/ncurses-6.1 install.data
+	make -C ./deps/ncurses-6.1 install.includes
 
 clean:
 	make -C ./deps/gmp-wasm clean || true

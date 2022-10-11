@@ -56,7 +56,7 @@ MODEL		= ../objects
 DESTDIR		= 
 top_srcdir	= ..
 srcdir		= .
-prefix		= /home/wmealing/Projects/cobweb-test/cobwebber/dist
+prefix		= /home/wmealing/Projects/build-test/cob-webber/dist
 exec_prefix	= ${prefix}
 bindir		= ${exec_prefix}/bin
 libdir		= ${exec_prefix}/lib
@@ -87,12 +87,12 @@ LN_S		= ln -s -f
 CTAGS		= ctags
 ETAGS		= etags
 
-CC		= gnatgcc
-CPP		= gnatgcc -E
-CFLAGS		= -O2 --param max-inline-insns-single=1200
+CC		= /home/wmealing/Projects/emsdk/upstream/emscripten/emcc
+CPP		= /home/wmealing/Projects/emsdk/upstream/emscripten/emcc -E
+CFLAGS		= -I/home/wmealing/Projects/build-test/cob-webber/dist/include -L/home/wmealing/Projects/build-test/cob-webber/dist/lib  
 
 INCDIR		= $(top_srcdir)/include
-CPPFLAGS	= -DHAVE_CONFIG_H -I../progs -I. -I../include  -D_GNU_SOURCE -D_DEFAULT_SOURCE -DNDEBUG
+CPPFLAGS	= -DHAVE_CONFIG_H -I../progs -I. -I../include -D_POSIX_C_SOURCE=199506L -DNDEBUG
 
 CCFLAGS		= $(CPPFLAGS) $(CFLAGS)
 
@@ -100,15 +100,15 @@ CFLAGS_LIBTOOL	= $(CCFLAGS)
 CFLAGS_NORMAL	= $(CCFLAGS)
 CFLAGS_DEBUG	= $(CCFLAGS) -g -DTRACE
 CFLAGS_PROFILE	= $(CCFLAGS) -pg
-CFLAGS_SHARED	= $(CCFLAGS) -fPIC
+CFLAGS_SHARED	= $(CCFLAGS) unknown
 
 CFLAGS_DEFAULT	= $(CFLAGS_NORMAL)
 
 REL_VERSION	= 6.1
 ABI_VERSION	= 6
-LOCAL_LIBDIR	= /home/wmealing/Projects/cobweb-test/cobwebber/deps/ncurses-6.1/lib
+LOCAL_LIBDIR	= /home/wmealing/Projects/build-test/cob-webber/deps/ncurses-6.1/lib
 
-LD		= ld
+LD		= /home/wmealing/Projects/emsdk/upstream/emscripten/emcc
 LINK		=  $(LIBTOOL_LINK)
 LDFLAGS		=  
 RPATH_LIST	= ${libdir}
@@ -121,10 +121,10 @@ LDFLAGS_SHARED	= $(LDFLAGS) $(CFLAGS_SHARED)
 
 LDFLAGS_DEFAULT	= $(LDFLAGS_NORMAL)
 
-LIBS_TIC	= -L../lib  -lncurses -lncurses   
+LIBS_TIC	= -L../lib -static -lncurses -lncurses -dynamic  
 LDFLAGS_TIC	= -L../lib $(LDFLAGS_NORMAL) $(LIBS_TIC)
 
-LIBS_TINFO	=  -lncurses   
+LIBS_TINFO	= -static -lncurses -dynamic  
 LDFLAGS_TINFO	= -L../lib $(LDFLAGS_NORMAL) $(LIBS_TINFO)
 
 LINT		= 
@@ -386,18 +386,18 @@ lintlib :
 #  suffix:        .a
 #  subset:        ticlib+termlib+ext_tinfo+base+ext_funcs
 #  driver:        no
-#  ShlibVer:      rel
+#  ShlibVer:      auto
 #  ShlibVerInfix: no
 #  SymLink:       ln -s -f
 #  TermlibRoot:   ncurses
 #  TermlibSuffix: .a
 #  ReLink:        no
-#  DoLinks:       yes
+#  DoLinks:       no
 #  rmSoLocs:      no
 #  ldconfig:      /usr/sbin/ldconfig
 #  overwrite:     no
 #  depend:        ../include/ncurses_cfg.h ./progs.priv.h
-#  host:          x86_64-pc-linux-gnu
+#  host:          none-none-none
 
 NORMAL_OBJS = \
 	../objects/clear$o \
@@ -522,18 +522,18 @@ clean ::
 #  suffix:        _g.a
 #  subset:        ticlib+termlib+ext_tinfo+base+ext_funcs
 #  driver:        no
-#  ShlibVer:      rel
+#  ShlibVer:      auto
 #  ShlibVerInfix: no
 #  SymLink:       ln -s -f
 #  TermlibRoot:   ncurses
 #  TermlibSuffix: .a
 #  ReLink:        no
-#  DoLinks:       yes
+#  DoLinks:       no
 #  rmSoLocs:      no
 #  ldconfig:      /usr/sbin/ldconfig
 #  overwrite:     no
 #  depend:        ../include/ncurses_cfg.h ./progs.priv.h
-#  host:          x86_64-pc-linux-gnu
+#  host:          none-none-none
 
 DEBUG_OBJS = \
 	../obj_g/clear$o \

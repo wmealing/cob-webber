@@ -52,7 +52,7 @@ CF_MFLAGS 	= -${MAKEFLAGS}
 DESTDIR		= 
 top_srcdir	= ..
 srcdir		= .
-prefix		= /home/wmealing/Projects/cobweb-test/cobwebber/dist
+prefix		= /home/wmealing/Projects/build-test/cob-webber/dist
 exec_prefix	= ${prefix}
 bindir		= ${exec_prefix}/bin
 libdir		= ${exec_prefix}/lib
@@ -63,7 +63,7 @@ includesubdir	= /ncurses
 INCLUDEDIR	= $(DESTDIR)$(includedir)$(includesubdir)
 
 tabsetdir	= $(datadir)/tabset
-ticdir		= /home/wmealing/Projects/cobweb-test/cobwebber/dist/share/terminfo
+ticdir		= /home/wmealing/Projects/build-test/cob-webber/dist/share/terminfo
 ticfile		= $(ticdir).db
 source		= ${top_srcdir}/misc/terminfo.src
 
