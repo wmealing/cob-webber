@@ -30,13 +30,13 @@ $(DEPS_OUT)/lib/libcob.a: $(DEPS_OUT)/lib/libgmp.a
 	cd ./deps/gnucobol-$(GNUCOBOL_VER) && emconfigure ./configure --host none --build none \
 	 	--without-db  CFLAGS="$(CFLAGS)" AR="emar" --disable-hardening \
 	 	--with-gmp=$(DEPS_OUT) --prefix=$(DEPS_OUT) 
-	cp gnucobol-no-popen.patch ./deps/gnucobol-$(GNUCOBOL_VER)
-	cp gnucobol-no-dlopen.patch ./deps/gnucobol-$(GNUCOBOL_VER)
-	cp gnucobol-no-unused-arguements.patch ./deps/gnucobol-$(GNUCOBOL_VER)
-	cd ./deps/gnucobol-$(GNUCOBOL_VER) && patch -p0 < gnucobol-no-popen.patch
-	cd ./deps/gnucobol-$(GNUCOBOL_VER) && patch -p0 < gnucobol-no-dlopen.patch
-	cd ./deps/gnucobol-$(GNUCOBOL_VER) && patch -p0 < gnucobol-no-unused-arguements.patch
-	exit 
+#	cp gnucobol-no-popen.patch ./deps/gnucobol-$(GNUCOBOL_VER)
+#	cp gnucobol-no-dlopen.patch ./deps/gnucobol-$(GNUCOBOL_VER)
+#	cp gnucobol-no-unused-arguements.patch ./deps/gnucobol-$(GNUCOBOL_VER)
+#	cd ./deps/gnucobol-$(GNUCOBOL_VER) && patch -p0 < gnucobol-no-popen.patch
+#	cd ./deps/gnucobol-$(GNUCOBOL_VER) && patch -p0 < gnucobol-no-dlopen.patch
+#	cd ./deps/gnucobol-$(GNUCOBOL_VER) && patch -p0 < gnucobol-no-unused-arguements.patch
+#	exit 
 	make -C ./deps/gnucobol-$(GNUCOBOL_VER) CFLAGS="$(CFLAGS)  -DCOB_BORKED_DLOPEN -DHAVE_UNISTD_H=false"  libcob  
 	make -C ./deps/gnucobol-$(GNUCOBOL_VER) install
 	cp ./deps/gnucobol-$(GNUCOBOL_VER)/libcob.h $(DEPS_OUT)/include
