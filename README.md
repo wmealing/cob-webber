@@ -215,14 +215,14 @@ A: Yes this is different from the other cobol packages named cobweb.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/wmealing/gnucobol-mode.svg?style=for-the-badge
-[contributors-url]: https://github.com/wmealing/gnucobol-mode/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/wmealing/gnucobol-mode.svg?style=for-the-badge
-[forks-url]: https://github.com/wmealing/gnucobol-mode/network/members
-[stars-shield]: https://img.shields.io/github/stars/wmealing/gnucobol-mode.svg?style=for-the-badge
-[stars-url]: https://github.com/wmealing/gnucobol-mode/stargazers
-[issues-shield]: https://img.shields.io/github/issues/wmealing/gnucobol-mode.svg?style=for-the-badge
-[issues-url]: https://github.com/wmealing/gnucobol-mode/issues
-[license-shield]: https://img.shields.io/github/license/wmealing/gnucobol-mode.svg?style=for-the-badge
-[license-url]: https://github.com/wmealing/gnucobol-mode/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/wmealing/cob-webber.svg?style=for-the-badge
+[contributors-url]: https://github.com/wmealing/cob-webber/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/wmealing/cob-webber.svg?style=for-the-badge
+[forks-url]: https://github.com/wmealing/cob-webber/network/members
+[stars-shield]: https://img.shields.io/github/stars/wmealing/cob-webber.svg?style=for-the-badge
+[stars-url]: https://github.com/wmealing/cob-webber/stargazers
+[issues-shield]: https://img.shields.io/github/issues/wmealing/cob-webber.svg?style=for-the-badge
+[issues-url]: https://github.com/wmealing/cob-webber/issues
+[license-shield]: https://img.shields.io/github/license/wmealing/cob-webber.svg?style=for-the-badge
+[license-url]: https://github.com/wmealing/cob-webber/blob/master/LICENSE.txt
 
